@@ -52,6 +52,11 @@ spec:
             - p2w.social
     elasticsearch:
       enabled: false
+    redis:
+      architecture: "standalone"
+      auth:
+        enabled: false
+      password: ""
     postgresql:
       enabled: false
       postgresqlHostname: ${host}
