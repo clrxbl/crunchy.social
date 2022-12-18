@@ -1,0 +1,12 @@
+apiVersion: databases.digitalocean.com/v1alpha1
+kind: DatabaseCluster
+metadata:
+  name: mastodon-psql
+  namespace: mastodon
+spec:
+  engine: pg
+  name: mastodon-psql
+  version: '14'
+  numNodes: 1
+  size: db-s-1vcpu-1gb
+  region: tor1
