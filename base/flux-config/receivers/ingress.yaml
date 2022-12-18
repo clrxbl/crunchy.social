@@ -5,6 +5,7 @@ metadata:
   namespace: flux-system
   annotations:
     nginx.ingress.kubernetes.io/whitelist-source-range: 192.30.252.0/22,185.199.108.0/22,140.82.112.0/20,143.55.64.0/20 # Github webhooks only (https://api.github.com/meta)
+    external-dns.alpha.kubernetes.io/target: ingress.p2w.social
 spec:
   rules:
     - host: flux.p2w.social
