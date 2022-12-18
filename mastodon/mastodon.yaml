@@ -56,7 +56,8 @@ spec:
       enabled: false
       hostname: "keydb"
       port: 6379
-      password: ""
+      auth:
+        existingSecret: "mastodon-secrets"
     postgresql:
       enabled: false
       postgresqlHostname: "private-mastodon-psql-do-user-1072553-0.b.db.ondigitalocean.com"

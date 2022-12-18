@@ -17,4 +17,6 @@ spec:
       enabled: false
     nodes: 1
     image: eqalpha/keydb:x86_64_v6.2.2
+    existingSecret: "mastodon-secrets"
+    existingSecretPasswordKey: "redis-password"
   interval: 30m
