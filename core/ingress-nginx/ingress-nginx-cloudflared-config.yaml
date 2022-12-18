@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: ingress-nginx-cloudflared-config
+    namespace: kube-system
+type: Opaque
+stringData:
+    config.yaml: ENC[AES256_GCM,data:bq3cHeLeMwq69V7ejwSS6h7JseOL9aB7U3IovMzP6q7GmyIGURAEeOqIvKATtFiNxaf7h7wKKTBCnBTr0v4UDj0PaDAHIBiV1BBhz8Bq6rN2SWp4hm8tg5Zw4OPhZ2ZOXCmtvurZb75rcTEpQ+LA+dkhmrbpkvO6TzlmXJpiD6o2IqL3y8vA/Fe0L1+w1Z/TPXDybj7oUIE8ZqSuu02xqWStM7afSGGnFMLSsCIpsGSlRtWBYxknMXR9RTOOgG/jKkGuEL7zcQ1TeHml8E1/E6MyzyTqEplxjHm8Ezd/GowE34/wyr5knWcee89JxUFjRRTM5vlHytrQSPsyp7fHrVcMSL5064Kq6XEa1p6ciuUfeJe31NBYOocRoRhqtL3Ta/76nf1Uh3XtBEOnre0QZ6vzMIrmzHCoqGDDru0uMn6QihrukNHS9b8tHhJa7JzfhQMN4tRtvWQnxjqZyfZmSQ1l36wjL7TPnqGCuSv/4ukamDJAcg38Rw2WDYMBii6Vk38Z/Iz5Rt5XUlAZp218WvVPpA7RWJU=,iv:7gzSMm6PXLPI8dbxeANikw9VoE5YLdrHPUyapxV6u1A=,tag:rl4lKWhGvGSXi+VfzKIiRA==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age19gj08c8zsqrgn3nkxdnf0m6cjmpruvrnnapvztjgja8nh3w5c9lqh4ag3d
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBXcFJ0YjJ6T0Vybnpvb2xR
+            aWo4bDBPZVNTRlFIVlgvUGZpQXlwRXYxTlVrCkdrMjdVR0hSNGliOGxMODRyd0Rs
+            NmZONURzcHFJcGlHWk0xSGtRaFg1QU0KLS0tIGNGNkJGTXFVYkJ3Nk5EQ2lYT2E0
+            ZHZzaHlTSnU5bVFKVXlMeHhXM3BEMEUKeEIRjh3JWaLsLiLII4sg0V6Wp6ZdWFvv
+            8SHg+8szNtiS4SlaEUr79xnHQ0vh9lD5pEfvVZqBzwqbOUhpSjEocA==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2022-12-18T21:14:47Z"
+    mac: ENC[AES256_GCM,data:DfYYu3XP59bL46t+40/QRMvAwYVBWajj2QMykaHjrCAhTrycOYTqLZIi2OdnBlAtJfJYuVgE/frDalbAQ0G6b9SZx/s7X20diO4sYI65idZTEcRrukAEcwZDlvYgUgPJCvwQeUk3ohqPjeU/XqIpaJUguKV0ioc28gkGneJkg84=,iv:WPyyyq092NC46uVI8oxRYfgIr+vRnT9uOOKjVxUa/hE=,tag:xjt8IP2L7fc/WB8OQ3nfoA==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.3
