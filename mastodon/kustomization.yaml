@@ -6,4 +6,4 @@ resources:
   - redis.yaml
   - git-repository.yaml
   - secrets.yaml
-  # - helm-release.yaml
+  - helm-release.yaml
