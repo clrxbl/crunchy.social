@@ -2,7 +2,7 @@ apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
   name: mastodon
-  namespace: flux-system
+  namespace: mastodon
 spec:
   interval: 10m0s
   path: ./mastodon/
@@ -18,9 +18,7 @@ spec:
     substituteFrom:
       - kind: ConfigMap
         name: mastodon-psql-private-connection
-        namespace: mastodon
         optional: true
       - kind: Secret
         name: mastodon-psql-credentials
-        namespace: mastodon
         optional: true
