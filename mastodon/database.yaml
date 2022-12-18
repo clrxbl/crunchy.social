@@ -10,3 +10,15 @@ spec:
   numNodes: 1
   size: db-s-1vcpu-1gb
   region: tor1
+---
+apiVersion: databases.digitalocean.com/v1alpha1
+kind: DatabaseUser
+metadata:
+  name: mastodon-psql
+  namespace: mastodon
+spec:
+  databaseCluster:
+    apiGroup: databases.digitalocean.com
+    kind: DatabaseCluster
+    name: mastodon-psql
+  username: mastodon
