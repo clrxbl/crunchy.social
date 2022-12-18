@@ -32,10 +32,10 @@ spec:
       secrets:
         existingSecret: "mastodon-secrets"
       smtp:
-        domain: noreply.p2w.social
-        from_address: "void@noreply.p2w.social"
-        port: 465
-        server: "email-smtp.us-east-1.amazonaws.com"
+        domain: p2w.social
+        from_address: "void@p2w.social"
+        port: 587
+        server: "smtp.postmarkapp.com"
         tls: true
         existingSecret: "mastodon-secrets"
     ingress:
@@ -59,10 +59,10 @@ spec:
       password: ""
     postgresql:
       enabled: false
-      postgresqlHostname: ${host}
-      postgresqlPort: ${port}
+      postgresqlHostname: "private-mastodon-psql-do-user-1072553-0.b.db.ondigitalocean.com"
+      postgresqlPort: 25061
       auth:
-        database: ${username}
-        username: ${username}
+        database: mastodon
+        username: mastodon
         existingSecret: "mastodon-psql-credentials"
   interval: 30m
