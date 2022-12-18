@@ -20,10 +20,12 @@ spec:
       local_domain: "p2w.social"
       persistence:
         assets:
+          storageClassName: "do-block-storage"
           resources:
             requests:
               storage: 10Gi
         system:
+          storageClassName: "do-block-storage"
           resources:
             requests:
               storage: 10Gi
