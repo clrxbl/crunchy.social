@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: flux-webhook
+  namespace: flux-system
+  annotations:
+    nginx.ingress.kubernetes.io/whitelist-source-range: 192.30.252.0/22,185.199.108.0/22,140.82.112.0/20,143.55.64.0/20 # Github webhooks only (https://api.github.com/meta)
+spec:
+  rules:
+    - host: flux.p2w.social
+      http:
+        paths:
+          - pathType: Prefix
+            path: /
+            backend:
+              service:
+                name: webhook-receiver
+                port:
+                  number: 80
+  tls:
+    - hosts:
+        - flux.p2w.social
+      secretName: wildcard-p2w-social-tls
