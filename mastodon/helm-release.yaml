@@ -1,0 +1,63 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: mastodon
+  namespace: mastodon
+spec:
+  chart:
+    spec:
+      chart: ./
+      sourceRef:
+        kind: GitRepository
+        name: mastodon-chart
+        namespace: flux-system
+      reconcileStrategy: Revision
+  values:
+    replicaCount: 1
+    mastodon:
+      createAdmin:
+        enabled: false # generate an admin user through CLI
+      local_domain: "p2w.social"
+      persistence:
+        assets:
+          resources:
+            requests:
+              storage: 10Gi
+        system:
+          resources:
+            requests:
+              storage: 10Gi
+      s3:
+        enabled: false # setup S3 in a bit
+      secrets:
+        existingSecret: "mastodon-secrets"
+      smtp:
+        domain: noreply.p2w.social
+        from_address: "void@noreply.p2w.social"
+        port: 465
+        server: "email-smtp.us-east-1.amazonaws.com"
+        tls: true
+        existingSecret: "mastodon-secrets"
+    ingress:
+      enabled: true
+      annotations:
+        external-dns.alpha.kubernetes.io/target: ingress.p2w.social
+      hosts:
+        - host: p2w.social
+          paths:
+            - path: '/'
+      tls:
+        - secretName: wildcard-p2w-social-tls
+          hosts:
+            - p2w.social
+    elasticsearch:
+      enabled: false
+    postgresql:
+      enabled: false
+      postgresqlHostname: ${host}
+      postgresqlPort: ${port}
+      auth:
+        database: ${username}
+        username: ${username}
+        existingSecret: "mastodon-psql-credentials"
+  interval: 30m

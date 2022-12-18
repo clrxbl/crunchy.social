@@ -14,3 +14,13 @@ spec:
     provider: sops
     secretRef:
       name: sops-age
+  postBuild:
+    substituteFrom:
+      - kind: ConfigMap
+        name: mastodon-psql-private-connection
+        namespace: mastodon
+        optional: true
+      - kind: Secret
+        name: mastodon-psql-credentials
+        namespace: mastodon
+        optional: true

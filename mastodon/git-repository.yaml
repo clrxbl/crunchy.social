@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: GitRepository
+metadata:
+  name: mastodon-chart
+  namespace: flux-system
+spec:
+  interval: 10m0s
+  ref:
+    commit: ae892d539ed35433ceadeadaf87113cca75c2ea7
+  url: https://github.com/mastodon/chart.git
