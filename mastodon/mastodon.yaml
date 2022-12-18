@@ -53,9 +53,9 @@ spec:
     elasticsearch:
       enabled: false
     redis:
-      architecture: "standalone"
-      auth:
-        enabled: false
+      enabled: false
+      hostname: "keydb"
+      port: 6379
       password: ""
     postgresql:
       enabled: false
