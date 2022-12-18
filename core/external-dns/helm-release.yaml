@@ -1,0 +1,22 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: external-dns
+  namespace: kube-system
+spec:
+  chart:
+    spec:
+      chart: external-dns
+      sourceRef:
+        kind: HelmRepository
+        name: bitnami
+        namespace: flux-system
+      version: 6.12.1
+  values:
+    sources:
+      - ingress
+    provider: cloudflare
+    cloudflare:
+      secretName: "cloudflare-api-token"
+      proxied: true
+  interval: 30m
