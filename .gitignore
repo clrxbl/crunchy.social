@@ -1,0 +1,9 @@
+# Trash
+.DS_Store
+Thumbs.db
+
+# Ensure we don't store anything that could leak decrypted secrets
+.decrypted~*
+*.agekey
+
+.vscode/
