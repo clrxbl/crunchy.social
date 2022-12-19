@@ -5,7 +5,7 @@ metadata:
   namespace: kube-system
 spec:
   acme:
-    email: "admin@p2w.social"
+    email: "admin@crunchy.social"
     server: https://acme-v02.api.letsencrypt.org/directory
     privateKeySecretRef:
       name: letsencrypt
