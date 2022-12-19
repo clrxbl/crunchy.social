@@ -6,5 +6,5 @@ metadata:
 spec:
   interval: 10m0s
   ref:
-    commit: 77ce6a071a0f9331672e05a3ddb2e2e1be31b065
+    commit: b8c8a7e482923b9d282b1d3e40bc92290db4222a
   url: https://github.com/clrxbl/mastodon-chart.git
