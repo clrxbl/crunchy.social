@@ -50,6 +50,8 @@ spec:
         server: "smtp.postmarkapp.com"
         tls: false
         existingSecret: "mastodon-secrets"
+      streaming:
+        rejectUnauthorizedTls: "0" # DO Managed Databases use self-signed certs and we do not have the ability to add our own certs without a custom image
     ingress:
       enabled: true
       annotations:
