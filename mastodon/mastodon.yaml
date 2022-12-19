@@ -13,9 +13,6 @@ spec:
         namespace: flux-system
       reconcileStrategy: Revision
   values:
-    image:
-      repository: yakumosaki/glitch-soc
-      tag: "20221218_01"
     replicaCount: 1
     mastodon:
       createAdmin:
