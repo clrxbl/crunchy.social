@@ -78,4 +78,5 @@ spec:
         database: mastodon
         username: mastodon
         existingSecret: "mastodon-psql-credentials"
+        sslMode: "require"
   interval: 30m
