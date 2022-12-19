@@ -37,9 +37,9 @@ spec:
         enabled: true
         bucket: "assets.p2w.social"
         endpoint: "https://assets.p2w.social.nyc3.digitaloceanspaces.com"
-        hostname: "https://nyc3.digitaloceanspaces.com"
+        hostname: "nyc3.digitaloceanspaces.com"
         region: "nyc3"
-        alias_host: "https://assets.p2w.social"
+        alias_host: "assets.p2w.social"
         existingSecret: "mastodon-secrets"
       secrets:
         existingSecret: "mastodon-secrets"
