@@ -51,7 +51,7 @@ spec:
           paths:
             - path: '/'
       tls:
-        - secretName: wildcard-p2w-social-tls
+        - secretName: wildcard-crunchy-social-tls
           hosts:
             - crunchy.social
     elasticsearch:

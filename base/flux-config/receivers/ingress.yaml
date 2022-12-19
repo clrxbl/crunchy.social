@@ -21,4 +21,4 @@ spec:
   tls:
     - hosts:
         - flux.crunchy.social
-      secretName: wildcard-p2w-social-tls
+      secretName: wildcard-crunchy-social-tls

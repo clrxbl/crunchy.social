@@ -1,10 +1,10 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: wildcard-p2w-social
+  name: wildcard-crunchy-social
   namespace: kube-system
 spec:
-  secretName: wildcard-p2w-social-tls
+  secretName: wildcard-crunchy-social-tls
   secretTemplate:
     annotations:
       replicator.v1.mittwald.de/replicate-to: "*"
