@@ -21,20 +21,20 @@ spec:
       preparedStatements: false
       createAdmin:
         enabled: false # generate an admin user through CLI
-      local_domain: "p2w.social"
+      local_domain: "crunchy.social"
       s3:
         enabled: true
-        bucket: "assets.p2w.social"
+        bucket: "assets.crunchy.social"
         endpoint: "https://nyc3.digitaloceanspaces.com"
-        hostname: "assets.p2w.social"
+        hostname: "assets.crunchy.social"
         region: "nyc3"
-        alias_host: "assets.p2w.social"
+        alias_host: "assets.crunchy.social"
         existingSecret: "mastodon-secrets"
       secrets:
         existingSecret: "mastodon-secrets"
       smtp:
-        domain: p2w.social
-        from_address: "void@p2w.social"
+        domain: crunchy.social
+        from_address: "void@crunchy.social"
         port: 25
         server: "smtp.postmarkapp.com"
         tls: false
@@ -44,16 +44,16 @@ spec:
     ingress:
       enabled: true
       annotations:
-        external-dns.alpha.kubernetes.io/target: ingress.p2w.social
+        external-dns.alpha.kubernetes.io/target: ingress.crunchy.social
         nginx.ingress.kubernetes.io/proxy-body-size: 32m
       hosts:
-        - host: p2w.social
+        - host: crunchy.social
           paths:
             - path: '/'
       tls:
         - secretName: wildcard-p2w-social-tls
           hosts:
-            - p2w.social
+            - crunchy.social
     elasticsearch:
       enabled: false
     redis:

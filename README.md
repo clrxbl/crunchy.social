@@ -1,6 +1,6 @@
-### p2w.social
+### crunchy.social
 
-A Mastodon instance available on https://p2w.social
+A Mastodon instance available on https://crunchy.social
 
 ### Flux
 
