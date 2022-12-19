@@ -45,6 +45,7 @@ spec:
       enabled: true
       annotations:
         external-dns.alpha.kubernetes.io/target: ingress.p2w.social
+        nginx.ingress.kubernetes.io/proxy-body-size: 32m
       hosts:
         - host: p2w.social
           paths:
