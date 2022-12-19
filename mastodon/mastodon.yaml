@@ -22,17 +22,6 @@ spec:
       createAdmin:
         enabled: false # generate an admin user through CLI
       local_domain: "p2w.social"
-      persistence:
-        assets:
-          storageClassName: "do-block-storage"
-          resources:
-            requests:
-              storage: 10Gi
-        system:
-          storageClassName: "do-block-storage"
-          resources:
-            requests:
-              storage: 10Gi
       s3:
         enabled: true
         bucket: "assets.p2w.social"
