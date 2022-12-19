@@ -18,6 +18,7 @@ spec:
       tag: "20221218_01"
     replicaCount: 1
     mastodon:
+      preparedStatements: false
       createAdmin:
         enabled: false # generate an admin user through CLI
       local_domain: "p2w.social"
