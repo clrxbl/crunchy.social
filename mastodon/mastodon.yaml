@@ -35,9 +35,9 @@ spec:
       smtp:
         domain: crunchy.social
         from_address: "void@crunchy.social"
-        port: 25
-        server: "smtp.postmarkapp.com"
-        tls: false
+        port: 587
+        server: "email-smtp.us-east-1.amazonaws.com"
+        tls: true
         existingSecret: "mastodon-secrets"
       streaming:
         rejectUnauthorizedTls: "0" # DO Managed Databases use self-signed certs and we do not have the ability to add our own certs without a custom image
