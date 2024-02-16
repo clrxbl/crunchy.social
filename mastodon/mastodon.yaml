@@ -14,7 +14,7 @@ spec:
       reconcileStrategy: Revision
   values:
     image:
-      repository: glitch-soc/mastodon
+      repository: ghcr.io/glitch-soc/mastodon
       tag: "nightly.2024-02-17-security"
     replicaCount: 1
     mastodon:
