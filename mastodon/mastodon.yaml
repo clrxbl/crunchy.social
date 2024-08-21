@@ -15,7 +15,7 @@ spec:
   values:
     image:
       repository: yakumosaki/glitch-soc
-      tag: "20240705_01"
+      tag: "20240820_13"
     replicaCount: 1
     mastodon:
       preparedStatements: false
