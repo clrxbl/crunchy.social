@@ -11,9 +11,11 @@ spec:
         kind: HelmRepository
         name: ingress-nginx
         namespace: flux-system
-      version: 4.4.0
+      version: 4.12.0
   values:
     controller:
+      image:
+        tag: "v1.12.1" # TODO: Remove next release
       kind: DaemonSet
       metrics:
         enabled: true
